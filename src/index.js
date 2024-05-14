@@ -1,13 +1,20 @@
-import "./style.css";
-import { projects } from "./todoLists.js";
-import {
-  navbar,
-  renderToDo,
-  renderProjects,
-  addButtons,
-} from "./pageSections.js";
+let {
+  getFont,
+  bg,
+  title,
+  axis,
+  playGame,
+  playerIndicator,
+  renderPlayerGameboard,
+  renderComputerGameboard,
+} = require("./pageSections.js");
 
-document.body.appendChild(navbar());
-document.body.appendChild(renderProjects(projects));
-document.body.appendChild(renderToDo(projects[0].todoList));
-document.body.appendChild(addButtons());
+document.body.style.margin = "0px";
+document.body.appendChild(getFont());
+document.body.appendChild(bg());
+document.body.appendChild(title());
+document.body.appendChild(axis());
+document.body.appendChild(playGame());
+document.body.appendChild(playerIndicator());
+document.body.appendChild(renderPlayerGameboard());
+document.body.appendChild(renderComputerGameboard());
